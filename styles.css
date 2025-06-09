@@ -6,6 +6,8 @@ body {
   color: #333;
 }
 
+/* HEADER NAV SECTION */
+
 header {
   background: #4caf50;
   color: #fff;
@@ -16,9 +18,23 @@ header {
   z-index: 1000;
 }
 
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
 nav {
   display: flex;
   justify-content: center;
+  transition: max-height 0.3s;
 }
 
 nav a {
@@ -30,6 +46,66 @@ nav a {
 
 nav a:hover {
   background: #45a049;
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    background: #4caf50;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    z-index: 1000;
+  }
+  nav.open {
+    max-height: 300px;
+    padding-bottom: 10px;
+  }
+  nav a {
+    width: 100%;
+    padding: 15px 20px;
+    border-top: 1px solid #388e3c;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #4caf50;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    width: 100%;
+    border-top: 1px solid #388e3c;
+    text-align: left;
+  }
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+  }
 }
 
 .hero {
@@ -253,6 +329,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 0 32px;
+  position: relative; /* Add this line */
 }
 
 .logo {
@@ -287,20 +364,33 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .skills-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  .nav-toggle {
+    display: block;
   }
-  .portfolio {
+  .nav-links {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    padding: 10px;
+    background: #4caf50;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
   }
-  .project-card {
-    width: 90vw;
-    height: auto;
-    margin-left: 0;
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    width: 100%;
+    border-top: 1px solid #388e3c;
+    text-align: left;
+  }
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
   }
 }
 
