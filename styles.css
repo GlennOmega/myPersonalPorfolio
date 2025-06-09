@@ -1,0 +1,281 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background: #4caf50;
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: #fff;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #45a049;
+}
+
+.hero {
+  background: url("profiles.png") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: bolder;
+}
+
+.hero p {
+  text-align: justify;
+  margin: 0 10px;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  padding: 20px 16px;
+
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-left: 45px;
+}
+
+.project-card img {
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+}
+
+/* ABOUT SECTION */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding-bottom: 25px;
+  background-color: #99bc85;
+}
+.about p {
+  text-align: justify;
+  padding: 0 10px;
+}
+
+.about img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 4px 16px rgba(228, 11, 11, 0.18);
+}
+
+/* SKILL SECTION  */
+.skills {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #e4efe7;
+  padding-bottom: 25px;
+}
+
+.skills h2 {
+  padding-top: 25px;
+}
+
+.skills {
+  /* Already set above, but for clarity: */
+  width: 100%;
+}
+
+.skills .skill {
+  width: 280px;
+  height: 320px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  /* margin: 16px; */
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column=;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills > h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s; /* Add this line for smooth scaling */
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+/* PORTFOLIO SECTION  */
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.project-card {
+  padding-bottom: 45px;
+}
+
+.portfolio-section {
+  background-color: #99bc85;
+  margin: 0;
+}
+
+.portfolio-section h2 {
+  margin: 0;
+  padding-top: 24px;
+}
+
+.project-card {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 500px;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+/* CONTACT SECTION */
+
+.contact {
+  background-color: #e4efe7;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background: #45a049;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  background: #333;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #99bc85;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .about img {
+    width: 120px;
+    height: 120px;
+  }
+}
