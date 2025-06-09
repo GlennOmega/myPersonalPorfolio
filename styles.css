@@ -269,13 +269,98 @@ footer {
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    height: 70vh;
+@media (max-width: 1024px) {
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
+  .project-card {
+    width: 90vw;
+    height: auto;
+    margin-left: 0;
+  }
+}
 
+@media (max-width: 900px) {
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .portfolio {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .project-card {
+    width: 90vw;
+    height: auto;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+  }
   .about img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+  }
+  .skills-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .skill {
+    width: 90vw;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  .portfolio {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .project-card {
+    width: 95vw;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 6px 0;
+  }
+  nav a {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  .hero {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  .about img {
+    width: 70px;
+    height: 70px;
+  }
+  .skill {
+    width: 98vw;
+    padding: 12px 4px;
+  }
+  .project-card {
+    width: 98vw;
+    padding: 10px 4px;
+  }
+  .contact input,
+  .contact textarea {
+    max-width: 98vw;
   }
 }
